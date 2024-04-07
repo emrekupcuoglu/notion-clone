@@ -7,9 +7,7 @@ import AddPage from "./AddPage";
 
 function SidebarHeader() {
   return (
-    <div className="border-b">
-      <h3 className=" mb-4 ml-3 mt-2 text-sm text-[#37352F80]">Private</h3>
-
+    <div className="border-b pt-3 ">
       <SideBarItem noChevron={true} icon={<IoSearch />}>
         Search
       </SideBarItem>

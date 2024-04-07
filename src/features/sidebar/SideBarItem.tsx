@@ -23,16 +23,22 @@ function SideBarItem({
 }: SideBarItemProps) {
   return (
     <div className="mb-2">
-      <p className="ml-2 flex items-center justify-start gap-1">
+      <p className="ml-2 flex items-center justify-start gap-1 font-semibold ">
         {!noChevron && (
           <>
             <span>
               <MdChevronRight />
             </span>
-            <span>{typeof icon === "string" ? iconMap[icon] : icon}</span>
+            <span className="pr-0.5">
+              {typeof icon === "string" ? iconMap[icon] : icon}
+            </span>
           </>
         )}
-        {noChevron && <span className="ml-2">{icon}</span>}
+        {noChevron && (
+          <span className="ml-2 pr-2">
+            {typeof icon === "string" ? iconMap[icon] : icon}
+          </span>
+        )}
         <span className="text-sm">{children}</span>
       </p>
     </div>

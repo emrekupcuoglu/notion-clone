@@ -12,14 +12,12 @@ function Sidebar() {
   const privatePages = pages.filter((page) => page.group === "private");
 
   return (
-    <>
-      <div className="row-span-full flex flex-col bg-[rgb(251,251,250)]">
-        <SidebarHeader />
-        <div className="overflow-y-scroll">
-          <PrivateGroup pages={privatePages} />
-        </div>
+    <div className="row-span-full flex flex-col bg-[rgb(247,247,245)] text-[#19171199]">
+      <SidebarHeader />
+      <div className="overflow-y-scroll">
+        <PrivateGroup pages={privatePages} />
       </div>
-    </>
+    </div>
   );
 }
 
