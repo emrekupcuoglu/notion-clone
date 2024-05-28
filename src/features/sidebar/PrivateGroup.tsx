@@ -13,6 +13,7 @@ function PrivateGroup({ pages }: PrivateGroupProps) {
           <SideBarItem
             icon={pageData.iconName as keyof IconMap}
             key={pageData.id}
+            pageId={pageData.id}
           >
             {pageData.name}
           </SideBarItem>

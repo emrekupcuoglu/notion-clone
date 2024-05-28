@@ -17,12 +17,7 @@ const iconMap = {
   page: <IoDocumentTextOutline />,
 } as const;
 
-function SideBarItem({
-  children,
-  icon = "page",
-
-  pageId,
-}: SideBarItemProps) {
+function SideBarItem({ children, icon = "page", pageId }: SideBarItemProps) {
   return (
     <Link to={`/${pageId}`}>
       <div className="mb-2" onClick={() => true}>

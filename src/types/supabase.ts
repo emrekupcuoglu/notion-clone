@@ -9,8 +9,9 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      pages: {
+      page: {
         Row: {
+          content: Json | null
           created_at: string
           group: string | null
           iconName: string | null
@@ -19,6 +20,7 @@ export type Database = {
           rowIndex: number | null
         }
         Insert: {
+          content?: Json | null
           created_at?: string
           group?: string | null
           iconName?: string | null
@@ -27,6 +29,7 @@ export type Database = {
           rowIndex?: number | null
         }
         Update: {
+          content?: Json | null
           created_at?: string
           group?: string | null
           iconName?: string | null

@@ -7,7 +7,7 @@ const BrowserRouter = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
-    children: [{ path: "/:id", element: <Page /> }],
+    children: [{ path: "/:pageId", element: <Page /> }],
   },
 ]);
 

@@ -8,7 +8,12 @@ function AddPage({ children }: AddPageProps) {
   const { createPage, isPending } = useCreatePage();
 
   function onClick() {
-    createPage({ name: "New Page", iconName: "page", group: "private" });
+    createPage({
+      name: "New Page",
+      iconName: "page",
+      group: "private",
+      content: [],
+    });
   }
 
   return (

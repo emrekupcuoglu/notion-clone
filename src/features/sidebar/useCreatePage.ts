@@ -1,6 +1,13 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { createPage as createPageAPI } from "../../services/apiPages";
+import { Block } from "@blocknote/core";
 
+interface CreatePageAPIInterface {
+  iconName: string;
+  name: string;
+  group: string;
+  content: Block[];
+}
 export function useCreatePage() {
   const queryClient = useQueryClient();
   const {
@@ -8,15 +15,8 @@ export function useCreatePage() {
     error,
     isPending,
   } = useMutation({
-    mutationFn: ({
-      iconName,
-      name,
-      group,
-    }: {
-      iconName: string;
-      name: string;
-      group: string;
-    }) => createPageAPI({ iconName, name, group }),
+    mutationFn: ({ iconName, name, group, content }: CreatePageAPIInterface) =>
+      createPageAPI({ iconName, name, group, content }),
 
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["pages"] });

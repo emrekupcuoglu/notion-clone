@@ -4,8 +4,7 @@ import SidebarHeader from "./SidebarHeader";
 import { usePages } from "./usePages";
 
 function Sidebar() {
-  const { pages, error, isPending } = usePages();
-  console.log({ pages, error, isPending });
+  const { pages, isPending } = usePages();
 
   if (isPending) return <Spinner />;
   if (pages === undefined) return null;
